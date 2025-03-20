@@ -115,7 +115,7 @@ jobs:
       with:
         test-name: py_2d_ej2d2_test
         setup-command: sudo -H pip install -r requirements.txt
-        command: 2d/ej2d2_test.py
+        command: pytest 2d/ej2d2_test.py
         timeout: 10
         max-score: 1
     - name: py_2d_ej2d3_test

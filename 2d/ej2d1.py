@@ -50,9 +50,18 @@ Exemple:
 
 def kg_to_lb(kg):
     # Write here your code
-    pass
+    try:
+        if kg <= 0 :
+            raise ValueError("Must be greater than 0.")
+        else:   
+            lb = kg * 2.20462
+            print(f"{round(lb, 2):.2f}")  # se pone esta funcion para que devuelve 2.20 pero supongo que al ser un string da error igualmente
+                                            # si se pone solo el round da 2.2
+            return f"{round(lb, 2):.2f}"
+    except TypeError:
+        raise TypeError("Must be a number.")
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-#print(kg_to_lb(50))
+print(kg_to_lb(1))
